@@ -4,54 +4,54 @@ import UserList from "../components/UsersList"
 const Users = () => {
     const USERS = [{
         "id": 1,
-        "image": "http://dummyimage.com/201x100.png/ff4444/ffffff",
+        "image": "https://gravatar.com/avatar/5660377032e7c1ef3869b9562892030f?s=400&d=robohash&r=x",
         "name": "Orren Spaducci",
         "places": 1
       }, {
         "id": 2,
-        "image": "http://dummyimage.com/113x100.png/dddddd/000000",
+        "image": "https://robohash.org/5660377032e7c1ef3869b9562892030f?set=set4&bgset=&size=400x400",
         "name": "Jone Jeanneau",
-        "places": 2
+        "places": 3
       }, {
         "id": 3,
-        "image": "http://dummyimage.com/169x100.png/ff4444/ffffff",
+        "image": "https://gravatar.com/avatar/072bdd84a34f446ba33f5e1fdc039442?s=400&d=robohash&r=x",
         "name": "Brigid Sarjent",
         "places": 3
       }, {
         "id": 4,
-        "image": "http://dummyimage.com/194x100.png/cc0000/ffffff",
+        "image": "https://robohash.org/072bdd84a34f446ba33f5e1fdc039442?set=set4&bgset=&size=400x400",
         "name": "Kynthia Hanwright",
-        "places": 4
+        "places": 7
       }, {
         "id": 5,
-        "image": "http://dummyimage.com/202x100.png/ff4444/ffffff",
+        "image": "https://gravatar.com/avatar/997a92d9c64327cf37e132692698d4e5?s=400&d=robohash&r=x",
         "name": "Bale Coule",
-        "places": 5
+        "places": 1
       }, {
         "id": 6,
-        "image": "http://dummyimage.com/100x100.png/ff4444/ffffff",
+        "image": "https://robohash.org/997a92d9c64327cf37e132692698d4e5?set=set4&bgset=&size=400x400",
         "name": "Cliff Schubbert",
-        "places": 6
+        "places": 2
       }, {
         "id": 7,
-        "image": "http://dummyimage.com/180x100.png/cc0000/ffffff",
+        "image": "https://gravatar.com/avatar/997a92d9c64327cf37e132692698d4e5?s=400&d=robohash&r=x",
         "name": "Donny Crux",
         "places": 7
       }, {
         "id": 8,
-        "image": "http://dummyimage.com/222x100.png/ff4444/ffffff",
+        "image": "https://robohash.org/ccd85d2d5eb8d82cbcba43c137b794a4?set=set4&bgset=&size=400x400",
         "name": "Gaylor Bedells",
-        "places": 8
+        "places": 2
       }, {
         "id": 9,
-        "image": "http://dummyimage.com/138x100.png/ff4444/ffffff",
+        "image": "https://gravatar.com/avatar/ccd85d2d5eb8d82cbcba43c137b794a4?s=400&d=robohash&r=x",
         "name": "Nadiya Prydden",
-        "places": 9
+        "places": 4
       }, {
         "id": 10,
-        "image": "http://dummyimage.com/202x100.png/cc0000/ffffff",
+        "image": "https://robohash.org/ae36bd38d7d80c77d4a72808bdb06b82?set=set4&bgset=&size=400x400",
         "name": "Charline Vassbender",
-        "places": 10
+        "places": 1
       }]
     return <UserList items={USERS} />
 }
