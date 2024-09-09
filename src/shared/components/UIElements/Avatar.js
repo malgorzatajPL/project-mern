@@ -1,12 +1,14 @@
+import React from 'react';
+
 import './Avatar.css';
 
 const Avatar = props => {
   return (
-    <div className={`avatar ${props.className}`} style={props.style}> 
+    <div className={`avatar ${props.className}`} style={props.style}>
       <img
-        src={props.src}
+        src={props.image}
         alt={props.alt}
-        style={{ width: 100, height: 100 }}
+        style={{ width: props.width, height: props.width }}
       />
     </div>
   );
