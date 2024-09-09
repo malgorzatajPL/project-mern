@@ -3,7 +3,6 @@ import Card from "../../shared/components/UIElements/Card";
 import "./PlaceItem.css";
 
 const PlaceItem = (props) => {
-    console.log(props)
   return (
     <li className="place-item">
       <Card className="place-item__content">
