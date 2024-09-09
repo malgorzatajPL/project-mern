@@ -1,20 +1,21 @@
 import React from "react";
 
 import "./NavLinks.css"
+import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 
 const NavLinks = props => {
     return   <ul className="nav-links">
         <li>
-            <NavLinks to="/">ALL USERS</NavLinks>
+            <NavLink to="/" exact>ALL USERS</NavLink>
         </li>
         <li>
-            <NavLinks to="/">MY PLACES</NavLinks>
+            <NavLink to="/u1/places">MY PLACES</NavLink>
         </li>
         <li>
-            <NavLinks to="/">ADD PLACE</NavLinks>
+            <NavLink to="/places/new">ADD PLACE</NavLink>
         </li>
         <li>
-            <NavLinks to="/">AUTHENTICATE</NavLinks>
+            <NavLink to="/auth">AUTHENTICATE</NavLink>
         </li>
     </ul>
   };
