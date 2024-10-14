@@ -1,24 +1,39 @@
-// src/MapComponent.js
+import React, { useEffect, useRef } from 'react';
+import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
-import React from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-
-// Set the initial map center and zoom level
 const mapContainerStyle = {
   width: '100%',
   height: '500px',
 };
 
- 
-const MapComponent = props => {
+const MapComponent = (props) => {
+  const mapRef = useRef(null);
+  const markerRef = useRef(null);
+
+  useEffect(() => {
+    if (mapRef.current) {
+      const map = mapRef.current;
+
+      const marker = new window.google.maps.marker.AdvancedMarkerElement({
+        position: props.coordinates,
+        map: map,
+        title: 'Marker Title', 
+      });
+
+      markerRef.current = marker;
+    }
+  }, [props.coordinates]);
+
   return (
-    <LoadScript googleMapsApiKey="AIzaSyCHQA_cZ3dxD-8DS5uGOV8eUTxE5K0p_pI">  
+    <LoadScript googleMapsApiKey="AIzaSyCHQA_cZ3dxD-8DS5uGOV8eUTxE5K0p_pI">
       <GoogleMap
+        onLoad={(map) => {
+          mapRef.current = map;
+        }}
         mapContainerStyle={mapContainerStyle}
         center={props.coordinates}
         zoom={18}
-      > 
-        <Marker position={props.coordinates} />
+      >
       </GoogleMap>
     </LoadScript>
   );
