@@ -20,14 +20,8 @@ export const VALIDATOR_MIN = val => ({ type: VALIDATOR_TYPE_MIN, val: val });
 export const VALIDATOR_MAX = val => ({ type: VALIDATOR_TYPE_MAX, val: val });
 export const VALIDATOR_EMAIL = () => ({ type: VALIDATOR_TYPE_EMAIL });
 
-export const validate = (value, validators = []) => {
+export const validate = (value, validators) => {
   let isValid = true;
-
-  if (!Array.isArray(validators)) {
-    console.error('Validators must be an array');
-    return false;  
-  }
-
   for (const validator of validators) {
     if (validator.type === VALIDATOR_TYPE_REQUIRE) {
       isValid = isValid && value.trim().length > 0;
@@ -48,6 +42,5 @@ export const validate = (value, validators = []) => {
       isValid = isValid && /^\S+@\S+\.\S+$/.test(value);
     }
   }
-
   return isValid;
 };
