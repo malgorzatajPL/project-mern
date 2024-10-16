@@ -7,7 +7,7 @@ import {
   VALIDATOR_REQUIRE,
   VALIDATOR_MINLENGTH
 } from '../../shared/util/validators';
-
+import "./FormPlace.css";
 
 const DUMMY_PLACES = [
   {
