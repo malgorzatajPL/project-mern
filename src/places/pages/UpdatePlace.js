@@ -115,9 +115,6 @@ if (!formState.inputs.title.value ) {
         <Button type="submit" disabled={!formState.isValid}>
           UPDATE PLACE
         </Button>
-
-<h1>SPRAWDZANKO</h1>
-<div className="loader"></div>
       </form>
   );
 };
