@@ -23,6 +23,7 @@ const cancelDeleteHandler = () => {
 }
 
 const confirmDeleteHandler = () => {
+  setShowConfirmModal(false);
   console.log('DELETE')
 }
 
